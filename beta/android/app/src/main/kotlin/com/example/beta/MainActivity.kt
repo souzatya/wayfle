@@ -1,4 +1,4 @@
-package com.example.beta
+package com.wayfle.beta
 
 import io.flutter.embedding.android.FlutterActivity
 
