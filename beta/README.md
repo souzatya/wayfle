@@ -1,8 +1,8 @@
-# beta
+# beta - wayfle
 
-Welcome to **wayfle**.
+Welcome to the official dev repository of **wayfle** beta.
 
-## Getting Started
+## Project Status
 
 This project is the testing sample for the original **wayfle** app.
 
