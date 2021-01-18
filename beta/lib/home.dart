@@ -13,6 +13,9 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("wayfle"),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: changeBrightness,
         child: const Icon(Icons.message),
