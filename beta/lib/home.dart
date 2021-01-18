@@ -13,8 +13,70 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("wayfle"),
+      body: CustomScrollView(
+        slivers: <Widget>[
+          SliverAppBar(
+            expandedHeight: 200.0,
+            title: Text("wayfle"),
+            pinned: true,
+          ),
+          SliverList(
+            delegate: SliverChildListDelegate([
+              ListTile(
+                leading: Icon(Icons.volume_off),
+                title: Text("Volume Off"),
+              ),
+              ListTile(
+                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+              ListTile(
+                  leading: Icon(Icons.volume_mute), title: Text("Volume Mute")),
+              ListTile(
+                  leading: Icon(Icons.volume_mute), title: Text("Volume Mute")),
+              ListTile(
+                  leading: Icon(Icons.volume_mute), title: Text("Volume Mute")),
+              ListTile(
+                  leading: Icon(Icons.volume_mute), title: Text("Volume Mute")),
+              ListTile(
+                  leading: Icon(Icons.volume_mute), title: Text("Volume Mute")),
+              ListTile(
+                  leading: Icon(Icons.volume_mute), title: Text("Volume Mute")),
+              ListTile(
+                  leading: Icon(Icons.volume_mute), title: Text("Volume Mute")),
+              ListTile(
+                  leading: Icon(Icons.volume_mute), title: Text("Volume Mute")),
+              ListTile(
+                  leading: Icon(Icons.volume_mute), title: Text("Volume Mute")),
+              ListTile(
+                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+              ListTile(
+                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+              ListTile(
+                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+              ListTile(
+                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+              ListTile(
+                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+              ListTile(
+                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+              ListTile(
+                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+              ListTile(
+                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+              ListTile(
+                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+              ListTile(
+                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+              ListTile(
+                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+              ListTile(
+                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+              ListTile(
+                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+              ListTile(
+                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+            ]),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: changeBrightness,
