@@ -12,7 +12,7 @@ class WayfleB extends StatelessWidget {
     return DynamicTheme(
         defaultBrightness: Brightness.light,
         data: (brightness) => ThemeData(
-              primarySwatch: Colors.teal,
+              primarySwatch: Colors.green,
               brightness: brightness,
             ),
         themedWidgetBuilder: (context, theme) {

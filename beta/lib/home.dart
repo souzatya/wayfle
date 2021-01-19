@@ -13,75 +13,37 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: CustomScrollView(
-        slivers: <Widget>[
-          SliverAppBar(
-            expandedHeight: 200.0,
-            title: Text("wayfle"),
-            pinned: true,
+      appBar: AppBar(
+        elevation: 0,
+        leading: Icon(Icons.camera_rounded),
+        title: Text("wayfle"),
+        actions: [
+          Switch(value: false, onChanged: (val){}),
+          SizedBox(width: 10),
+          Icon(Icons.search),
+          SizedBox(width: 10),
+        ],
+        brightness: Brightness.light,
+      ),
+      body: Stack(
+        alignment: Alignment.bottomLeft,
+        children: <Widget> [
+          Container(
+            color: Colors.green,
           ),
-          SliverList(
-            delegate: SliverChildListDelegate([
-              ListTile(
-                leading: Icon(Icons.volume_off),
-                title: Text("Volume Off"),
-              ),
-              ListTile(
-                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
-              ListTile(
-                  leading: Icon(Icons.volume_mute), title: Text("Volume Mute")),
-              ListTile(
-                  leading: Icon(Icons.volume_mute), title: Text("Volume Mute")),
-              ListTile(
-                  leading: Icon(Icons.volume_mute), title: Text("Volume Mute")),
-              ListTile(
-                  leading: Icon(Icons.volume_mute), title: Text("Volume Mute")),
-              ListTile(
-                  leading: Icon(Icons.volume_mute), title: Text("Volume Mute")),
-              ListTile(
-                  leading: Icon(Icons.volume_mute), title: Text("Volume Mute")),
-              ListTile(
-                  leading: Icon(Icons.volume_mute), title: Text("Volume Mute")),
-              ListTile(
-                  leading: Icon(Icons.volume_mute), title: Text("Volume Mute")),
-              ListTile(
-                  leading: Icon(Icons.volume_mute), title: Text("Volume Mute")),
-              ListTile(
-                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
-              ListTile(
-                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
-              ListTile(
-                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
-              ListTile(
-                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
-              ListTile(
-                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
-              ListTile(
-                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
-              ListTile(
-                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
-              ListTile(
-                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
-              ListTile(
-                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
-              ListTile(
-                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
-              ListTile(
-                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
-              ListTile(
-                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
-              ListTile(
-                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
-              ListTile(
-                  leading: Icon(Icons.volume_down), title: Text("Volume Down")),
-            ]),
+          Container(
+            height: 600,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(topLeft: Radius.circular(30), topRight: Radius.circular(30)),
+            ),
           ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: changeBrightness,
         child: const Icon(Icons.message),
-        backgroundColor: Colors.teal[400],
+        backgroundColor: Colors.green,
       ),
     );
   }
