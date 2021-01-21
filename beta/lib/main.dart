@@ -14,7 +14,7 @@ class WayfleB extends StatelessWidget {
       theme: ThemeData(
         backgroundColor: Colors.white,
         primaryColor: Colors.white,
-        fontFamily: 'Proxima Nova',
+        fontFamily: 'Manrope',
       ),
       home: Home(),
     );

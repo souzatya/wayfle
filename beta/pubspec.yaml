@@ -63,9 +63,9 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Proxima Nova
+    - family: Manrope
       fonts:
-        - asset: fonts/proxima-nova/Proxima-Nova.ttf
+        - asset: fonts\Manrope\static\Manrope-Medium.ttf
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
