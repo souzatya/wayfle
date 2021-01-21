@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 import 'home.dart';
 
 void main() {
-  runApp(WayfleB());
+  runApp(Wayfle());
 }
 
-class WayfleB extends StatelessWidget {
+class Wayfle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'wayfle',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
         backgroundColor: Colors.white,
         primaryColor: Colors.white,
-        fontFamily: 'Manrope',
       ),
       home: Home(),
     );
