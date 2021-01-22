@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_switch/flutter_switch.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -35,8 +36,40 @@ class _HomeState extends State<Home> {
             actions: [
               Container(
                 margin: EdgeInsets.only(top: 8.0, bottom: 8.0, right: 5.0),
+                child: FlutterSwitch(
+                  width: 60.0,
+                  height: 30.0,
+                  toggleSize: 30.0,
+                  value: false,
+                  borderRadius: 30.0,
+                  padding: 0.0,
+                  activeToggleColor: Colors.teal[900],
+                  inactiveToggleColor: Colors.teal[800],
+                  activeSwitchBorder: Border.all(
+                    color: Colors.tealAccent.withOpacity(0.8),
+                    width: 5.0,
+                  ),
+                  inactiveSwitchBorder: Border.all(
+                    color: Colors.grey.withOpacity(0.3),
+                    width: 5.0,
+                  ),
+                  activeColor: Colors.teal.withOpacity(0.2),
+                  inactiveColor: Colors.white,
+                  activeIcon: Icon(
+                    Icons.nightlight_round,
+                    color: Colors.yellow,
+                  ),
+                  inactiveIcon: Icon(
+                    Icons.wb_sunny,
+                    color: Colors.amber[200],
+                  ),
+                  onToggle: (value) => true,
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 8.0, bottom: 8.0, right: 5.0),
                 decoration: BoxDecoration(
-                  color: Colors.grey[200],
+                  color: Colors.grey.withOpacity(0.2),
                   shape: BoxShape.circle,
                 ),
                 child: IconButton(
@@ -45,21 +78,15 @@ class _HomeState extends State<Home> {
                   onPressed: () {},
                 ),
               ),
-              Container(
-                margin: EdgeInsets.only(top: 8.0, bottom: 8.0, right: 5.0),
-                decoration: BoxDecoration(
-                  color: Colors.grey[200],
-                  shape: BoxShape.circle,
-                ),
-                child: IconButton(
-                  icon: Icon(Icons.menu_rounded),
-                  color: Colors.teal,
-                  onPressed: () {},
-                ),
-              ),
             ],
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.teal,
+        foregroundColor: Colors.white,
+        child: Icon(Icons.message),
+        onPressed: () {},
       ),
     );
   }
