@@ -18,8 +18,7 @@ class _HomeState extends State<Home> {
               child: CircleAvatar(
                 radius: 10.0,
                 backgroundColor: Colors.grey[200],
-                backgroundImage: NetworkImage(
-                    'https://pbs.twimg.com/profile_images/1222789627074842625/T99zld9f_400x400.jpg'),
+                backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1222789627074842625/T99zld9f_400x400.jpg'),
               ),
             ),
             floating: true,
