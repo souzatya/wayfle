@@ -30,6 +30,7 @@ dependencies:
   cupertino_icons: ^1.0.0
   flutter_switch: ^0.2.0
   dynamic_theme: ^1.0.1
+  shared_preferences: ^0.5.12+4
 
 dev_dependencies:
   flutter_test:
