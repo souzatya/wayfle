@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -9,12 +8,6 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   bool mode = false;
-
-  getdarkmode() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    mode = prefs.getBool('darkmode');
-    return mode;
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,8 +20,7 @@ class _HomeState extends State<Home> {
               child: CircleAvatar(
                 radius: 10.0,
                 backgroundColor: Colors.grey[200],
-                backgroundImage: NetworkImage(
-                    'https://pbs.twimg.com/profile_images/1222789627074842625/T99zld9f_400x400.jpg'),
+                backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1222789627074842625/T99zld9f_400x400.jpg'),
               ),
             ),
             floating: true,
