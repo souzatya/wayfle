@@ -1,5 +1,8 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -7,7 +10,11 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  bool mode = false;
+  Future<bool> getdarkmode() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    bool mode = prefs.getBool('darkmode');
+    return mode;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +27,8 @@ class _HomeState extends State<Home> {
               child: CircleAvatar(
                 radius: 10.0,
                 backgroundColor: Colors.grey[200],
-                backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1222789627074842625/T99zld9f_400x400.jpg'),
+                backgroundImage: NetworkImage(
+                    'https://pbs.twimg.com/profile_images/1222789627074842625/T99zld9f_400x400.jpg'),
               ),
             ),
             floating: true,
@@ -41,11 +49,11 @@ class _HomeState extends State<Home> {
                   width: 60.0,
                   height: 30.0,
                   toggleSize: 30.0,
-                  value: mode,
+                  value: false,
                   borderRadius: 30.0,
                   padding: 0.0,
                   activeToggleColor: Colors.teal[900],
-                  inactiveToggleColor: Colors.teal[800],
+                  inactiveToggleColor: Colors.teal,
                   activeSwitchBorder: Border.all(
                     color: Colors.tealAccent.withOpacity(0.8),
                     width: 5.0,
@@ -62,7 +70,7 @@ class _HomeState extends State<Home> {
                   ),
                   inactiveIcon: Icon(
                     Icons.wb_sunny,
-                    color: Colors.amber[200],
+                    color: Colors.yellow,
                   ),
                   onToggle: (mode) => true,
                 ),
