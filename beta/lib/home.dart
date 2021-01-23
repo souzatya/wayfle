@@ -70,11 +70,11 @@ class _HomeState extends State<Home> {
               Container(
                 margin: EdgeInsets.only(top: 8.0, bottom: 8.0, right: 5.0),
                 decoration: BoxDecoration(
-                  color: Colors.grey.withOpacity(0.2),
+                  color: Colors.grey.withOpacity(0.3),
                   shape: BoxShape.circle,
                 ),
                 child: IconButton(
-                  icon: Icon(Icons.search),
+                  icon: Icon(Icons.search_rounded),
                   color: Colors.teal,
                   onPressed: () {},
                 ),
