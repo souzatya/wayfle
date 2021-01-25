@@ -1,3 +1,4 @@
+import 'package:beta/splash.dart';
 import 'package:flutter/material.dart';
 import 'home.dart';
 
@@ -16,7 +17,7 @@ class Wayfle extends StatelessWidget {
         backgroundColor: Colors.white,
         primaryColor: Colors.white,
       ),
-      home: Home(),
+      home: Splash(),
     );
   }
 }
