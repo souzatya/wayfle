@@ -1,4 +1,4 @@
-import 'package:beta/splash.dart';
+import 'package:beta/app/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:beta/services/shared_prefs.dart';
 
