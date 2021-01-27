@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:beta/app/home.dart';
+import 'package:beta/common/theme.dart';
 
 class Splash extends StatefulWidget {
   @override
@@ -25,7 +26,7 @@ class _SplashState extends State<Splash> {
       type: MaterialType.transparency,
       child: Container(
         alignment: Alignment.center,
-        color: Colors.white,
+        color: theme.primColor,
         child: TyperAnimatedTextKit(
           speed: Duration(milliseconds: 150),
           text: ["wayfle"],
