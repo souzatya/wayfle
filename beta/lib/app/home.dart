@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
+import 'package:beta/services/shared_prefs.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -42,7 +43,7 @@ class _HomeState extends State<Home> {
                   width: 60.0,
                   height: 30.0,
                   toggleSize: 30.0,
-                  value: false,
+                  value: sharedPrefs.darkmode,
                   borderRadius: 30.0,
                   padding: 0.0,
                   activeToggleColor: Colors.teal[900],
