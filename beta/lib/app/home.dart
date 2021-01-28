@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:beta/services/shared_prefs.dart';
 import 'package:flutter_phoenix/flutter_phoenix.dart';
+import 'package:beta/common/theme.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -42,21 +43,21 @@ class _HomeState extends State<Home> {
               Container(
                 margin: EdgeInsets.only(top: 8.0, bottom: 8.0, right: 5.0),
                 child: FlutterSwitch(
-                  width: 60.0,
-                  height: 30.0,
-                  toggleSize: 30.0,
+                  width: 65.0,
+                  height: 35.0,
+                  toggleSize: 35.0,
                   value: sharedPrefs.darkmode,
-                  borderRadius: 30.0,
+                  borderRadius: 35.0,
                   padding: 0.0,
                   activeToggleColor: Colors.teal[900],
                   inactiveToggleColor: Colors.teal,
                   activeSwitchBorder: Border.all(
-                    color: Colors.tealAccent.withOpacity(0.8),
-                    width: 5.0,
+                    color: Colors.tealAccent.withOpacity(0.7),
+                    width: 3.0,
                   ),
                   inactiveSwitchBorder: Border.all(
-                    color: Colors.grey.withOpacity(0.3),
-                    width: 5.0,
+                    color: Colors.grey.withOpacity(0.4),
+                    width: 3.0,
                   ),
                   activeColor: Colors.teal.withOpacity(0.2),
                   inactiveColor: Colors.white,
@@ -70,7 +71,7 @@ class _HomeState extends State<Home> {
                   ),
                   onToggle: (value) => setState(() {
                     sharedPrefs.darkmode = value;
-                    Timer(Duration(milliseconds: 300),
+                    Timer(Duration(milliseconds: 400),
                         () => Phoenix.rebirth(context));
                   }),
                 ),
@@ -93,7 +94,7 @@ class _HomeState extends State<Home> {
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.teal,
-        foregroundColor: Colors.white,
+        foregroundColor: theme.primColor,
         child: Icon(Icons.message),
         onPressed: () {},
       ),
