@@ -1,4 +1,3 @@
-import 'dart:async';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -6,6 +5,8 @@ import 'package:flutter_switch/flutter_switch.dart';
 import 'package:beta/services/shared_prefs.dart';
 import 'package:flutter_phoenix/flutter_phoenix.dart';
 import 'package:beta/common/theme.dart';
+
+var home;
 
 class Home extends StatefulWidget {
   @override
@@ -71,8 +72,8 @@ class _HomeState extends State<Home> {
                   ),
                   onToggle: (value) => setState(() {
                     sharedPrefs.darkmode = value;
-                    Timer(Duration(milliseconds: 400),
-                        () => Phoenix.rebirth(context));
+                    home = Home();
+                    Phoenix.rebirth(context);
                   }),
                 ),
               ),
